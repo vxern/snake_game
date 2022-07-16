@@ -215,7 +215,7 @@ impl event::EventHandler for GameState {
             }
         }
 
-        self.tiles[self.head_position.x][self.head_position.y].is_occupied = true;
+        self.tiles[self.head_position.y][self.head_position.x].is_occupied = true;
 
         if self.tail_positions.contains(&self.head_position) {
             self.state = State::Lost;
